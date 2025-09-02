@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects & Mini-Projects Showcase</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0b1020;
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #121730;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+      color: #00d1ff;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background: #1c2236;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h2 {
+      margin-bottom: 12px;
+      font-size: 20px;
+      color: #ffcc00;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 8px 14px;
+      background: #00d1ff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #00a0cc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #121730;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚀 Projects & Mini-Projects Showcase</h1>
+  </header>
+
+  <div class="container" id="projects">
+    <div class="card">
+      <h2>Visitor Management System</h2>
+      <p>A secure visitor registration & check-in system with QR code integration.</p>
+      <a href="#" class="btn">View Project</a>
+    </div>
+
+    <div class="card">
+      <h2>Portfolio Website</h2>
+      <p>Personal portfolio showcasing skills, achievements, and GitHub work.</p>
+      <a href="#" class="btn">View Project</a>
+    </div>
+
+    <div class="card">
+      <h2>Data Analytics Dashboard</h2>
+      <p>Interactive dashboard for analyzing datasets with charts & filters.</p>
+      <a href="#" class="btn">View Project</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Your Name | Built with ❤️ using HTML, CSS & JS
+  </footer>
+
+  <script>
+    // Example: Add new project dynamically
+    function addProject(title, desc, link) {
+      let container = document.getElementById("projects");
+      let div = document.createElement("div");
+      div.classList.add("card");
+      div.innerHTML = `
+        <h2>${title}</h2>
+        <p>${desc}</p>
+        <a href="${link}" target="_blank" class="btn">View Project</a>
+      `;
+      container.appendChild(div);
+    }
+
+    // Example: Adding a Mini-Project dynamically
+    addProject("Weather App", "Mini-project using API to show live weather updates.", "#");
+  </script>
+</body>
+</html>
